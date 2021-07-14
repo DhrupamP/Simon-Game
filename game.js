@@ -1,8 +1,6 @@
 var buttonColours = ["red", "blue", "green", "yellow"];
-
 var gamePattern = [];
 var userClickedPattern = [];
-
 var started = false;
 var level = 0;
 
@@ -24,8 +22,6 @@ $(".btn").click(function() {
 
   checkAnswer(userClickedPattern.length-1);
 });
-
-
 function checkAnswer(currentLevel) {
 
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
@@ -41,9 +37,7 @@ function checkAnswer(currentLevel) {
     } else {
 
       console.log("wrong");
-
       playSound("wrong");
-
       $("body").addClass("game-over");
       setTimeout(function () {
         $("body").removeClass("game-over");
